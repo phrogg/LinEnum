@@ -1314,6 +1314,12 @@ if [ "$lxdgroup" ]; then
 fi
 }
 
+# check for changeable dirs
+find / -type f -writable 2>/dev/null
+
+# find executeable sh
+find / -iname "*.sh"
+
 footer()
 {
 echo -e "\e[00;33m### SCAN COMPLETE ####################################\e[00m" 
